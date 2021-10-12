@@ -15,13 +15,28 @@
    function isEmpty(str){
     return (str == null) || (str.length == 0);
    }
+   function getMatch(){
+      
+      let file = "users.txt";
+
+      let reader = new FileReader();
+
+      reader.readAsText(file);
+      status.innerHTML = reader.result;
+   }
+   function addUsers(var users){
+   
+   }
   </script>
  </head> 
  <body>
   <form action="">
-   <p>Введите адрес электронной почты и нажмите кнопку &laquo;Проверить&raquo;</p>
-   <p><input type="text" id="email"> <span id="status"></span></p>
-   <p><input type="button" value="Проверить" onclick="isEmail()"></p>
+   <p>Введите имя пользователя чтобы увидеть мэтчи</p>
+   <!--<p><input type="text" id="user"> <span id="status"></span></p>-->
+   <p><input type="text" id="user"></p>
+   <p><span id="status"></span></p>
+   <p><input type="button" value="Проверить" onclick="getMatch()"></p>
+   <p>Введите пользователей через запятую(ex. user1, user2) чтобы добавить их в свой список</p>
   </form>
  </body>
 </html>
