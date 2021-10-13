@@ -28,6 +28,9 @@
    fs=require("fs")
    fs.writeFileSync("/files/users.txt", document.getElementById("users").value,  "ascii")
    }
+   function getEpmUrl(){
+   return "EPM";
+   }
   </script>
  </head> 
  <body>
@@ -40,6 +43,7 @@
    <p>Введите пользователей через запятую(ex. user1, user2) чтобы добавить их в свой список</p>
    <p><input type="text" id="users"></p>
    <p><input type="button" value="Добавить пользователей" onclick="addUsers()"></p>
+   <input name="epmurl" id="epmHostName" type="text" maxlength="100" size="50" value='<%=(getEpmUrl())%>'/>
   </form>
  </body>
 </html>
